@@ -9,6 +9,6 @@ root.title("Projeto Auto Escola")
 root.configure(background = "yellow")
 
 Tops = frame(root, width=1350, height=100, bd=9,relief ="raise")
-Tops.pack(side=TOP)
+Tops.pack(side=left)
 
 root.mainloop()
