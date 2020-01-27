@@ -2,20 +2,24 @@ from tkinter import*
 import random
 import time;
 import datetime
+from tkinter import ttk
+from tkinter import messagebox
+from PIL import ImageTk, Image
 
-root = Tk()
+class mainwindow():
 
-root.geometry("1250x650+50+50")
-root.title("Projeto Auto Escola")
-root.configure(background = "grey")
+    def __init__(self):
+    # ================ FRAME
+        self.root = Tk()
+        self.root.geometry("1250x650+50+50")
+        self.root.resizable(False,False)
+        self.root.protocol("WM_DELETE_WINDOW")
+        self.root.iconbitmap("")
+        self.root.title("Projeto Auto Escola")
+        self.root.configure(background = 'white')
 
-Tops = Frame (root, width=1350, height=100, bd=9,relief ="raise")
-Tops.pack(side=TOP)
-
-Fleft1 = Frame (root, width=900, height=650, bd=8,relief ="raise")
-Fleft1.pack(side=LEFT)
-
-Fright1 = Frame (root, width=400, height=650, bd=9,relief ="raise")
-Fright1.pack(side=RIGHT)
-
-root.mainloop()
+        self.root.mainloop()
+try:
+    mainwindow()
+except:
+    raise Exception("Formulario não pode ser criado")
